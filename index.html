@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Statue of Liberty</title>
+
+	<link href="CSS/stylesheet.css" rel="stylesheet" type="text/css">
+	
+	</head>
+
+<body>
+<div id="container"><!--------------------   begin  container div   --------------------->
+	<div id="heading"><!--heading-->
+
+		<h1>Check out the Statue of Liberty on the map below!</h1>	
+	
+	</div><!-----close heading----->
+	
+	
+	<div id="map"><!-----Map----->
+	
+	<script>
+		
+		function initMap(){
+			var JSmap = new google.maps.Map(document.getElementById('map'),{
+			center: {lat: 40.6892534, lng: -74.0466944},
+				zoom: 10,
+			});
+			var marker = new google.maps.Marker({
+				position: {lat: 40.6892534, lng: -74.0466944},
+				map: JSmap,
+				title: "Statue of Liberty",
+				icon: "images/NY_icon.png",
+				zoom: -80,
+			});
+		}
+		
+	</script><!-----close Map----->
+	
+	</div>
+	
+	
+	<div id="Information">
+		<p>The Statue of Liberty (Liberty Enlightening the World; French: La Liberté éclairant le monde) is a colossal neoclassical sculpture on Liberty Island in New York Harbor within New York City, in the United States. The copper statue, a gift from the people of France to the people of the United States, was designed by French sculptor Frédéric Auguste Bartholdi and its metal framework was built by Gustave Eiffel. The statue was dedicated on October 28, 1886.</p>
+	</div>
+	 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJdGD-klB5BVzGULoT9B5eOfyD67c3NHQ&callback=initMap" async defer></script>
+	</div><!--------------------   closing  container div   --------------------->
+	</body>
+</html>
